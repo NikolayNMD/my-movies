@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Notify } from 'notiflix';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
@@ -36,3 +37,9 @@ export const getReviews = async movieId => {
   );
   return response.data.results;
 };
+
+export function onGetError() {
+  Notify.failure(
+    'Ooops! Something went wrong! Try reloading the page or make another choice!'
+  );
+}
