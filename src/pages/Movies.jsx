@@ -1,6 +1,6 @@
 import { SearchForm } from 'components/SearchForm/SearchForm';
 import { useState } from 'react';
-import { getSearchByKeyword } from 'services/api';
+import { getSearchByKeyword, onGetError } from 'services/api';
 import { MoviesList } from './MoviesList';
 import { Loader } from 'components/Loader/Loader';
 
@@ -17,9 +17,7 @@ export const Movies = () => {
         setSearchFilms(searchResults);
         setNoMoviesText(searchResults.length === 0);
       })
-      .catch(error => {
-        console.log(error);
-      })
+      .catch(onGetError)
       .finally(() => {
         setLoading(false);
       });
