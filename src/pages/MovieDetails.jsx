@@ -4,7 +4,7 @@ import { getMovieDetails, onGetError } from 'services/api';
 import { AddListStyle, CardStyle, StyledLink, WrapStyle } from './Pages.styled';
 import { Loader } from 'components/Loader/Loader';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -91,3 +91,5 @@ export const MovieDetails = () => {
     </>
   );
 };
+
+export default MovieDetails;

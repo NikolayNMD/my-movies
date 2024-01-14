@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { getActors, onGetError } from 'services/api';
 import { LiCast, UlCast } from './Cast.styled';
 
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
   const [loading, setLoading] = useState(false);
   const [cast, setCast] = useState([]);
@@ -59,3 +59,5 @@ export const Cast = () => {
     </>
   );
 };
+
+export default Cast;

@@ -4,7 +4,7 @@ import { getSearchByKeyword, onGetError } from 'services/api';
 import { MoviesList } from './MoviesList';
 import { Loader } from 'components/Loader/Loader';
 
-export const Movies = () => {
+const Movies = () => {
   const [searchFilms, setSearchFilms] = useState([]);
   const [loading, setLoading] = useState(false);
   const [noMoviesText, setNoMoviesText] = useState(false);
@@ -34,3 +34,5 @@ export const Movies = () => {
     </main>
   );
 };
+
+export default Movies;
