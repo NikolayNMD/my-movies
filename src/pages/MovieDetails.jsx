@@ -74,7 +74,7 @@ export const MovieDetails = () => {
               <p>{overview}</p>
             </CardStyle>
           </WrapStyle>
-          <h3>Additional information:</h3>
+          <h3 style={{ marginBottom: '20px' }}>Additional information:</h3>
           <AddListStyle>
             <li>
               <Link to="cast">Cast</Link>
